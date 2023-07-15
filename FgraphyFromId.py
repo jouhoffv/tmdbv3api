@@ -11,6 +11,9 @@ def read_api_key():
         for row in reader:
             return row[0]  # Assuming the API key is in the first column (modify as per your CSV structure)
 
+# Set the API key
+tmdb.api_key = read_api_key()
+
 # Function to get the filmography details for a person
 def get_person_filmography(person_id):
     person = Person()
