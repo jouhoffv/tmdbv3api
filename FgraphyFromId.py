@@ -27,10 +27,14 @@ def add_filmography_details(person_id):
     film_names = [film['title'] for film in filmography]
     film_years = [film['release_date'].split('-')[0] if film['release_date'] else 'N/A' for film in filmography]
 
-    # Add the filmography details to columns 5, 6, and 7 (modify as per your needs)
-    for i in range(len(film_ids)):
-        # Replace the following line with your desired method of adding the filmography details to columns
-        print(f"Column 5: {film_ids[i]}, Column 6: {film_names[i]}, Column 7: {film_years[i]}")
+    # Write the filmography details to a CSV file
+    with open('output.csv', 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(['Column 5', 'Column 6', 'Column 7'])  # Write header row
+        for i in range(len(film_ids)):
+            writer.writerow([film_ids[i], film_names[i], film_years[i]])
+
+    print("Filmography details have been written to output.csv")
 
 # Example usage
 person_id = input("Enter the person ID: ")
