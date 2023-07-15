@@ -20,16 +20,17 @@ def get_person_filmography(person_id):
     filmography = person.movie_credits(person_id).cast
     return filmography
 
-# Function to add the film IDs and names to columns 5 and 6
+# Function to add the film IDs, names, and release years to columns 5, 6, and 7
 def add_filmography_details(person_id):
     filmography = get_person_filmography(person_id)
     film_ids = [film['id'] for film in filmography]
     film_names = [film['title'] for film in filmography]
+    film_years = [film['release_date'].split('-')[0] if film['release_date'] else 'N/A' for film in filmography]
 
-    # Add the filmography details to columns 5 and 6 (modify as per your needs)
+    # Add the filmography details to columns 5, 6, and 7 (modify as per your needs)
     for i in range(len(film_ids)):
         # Replace the following line with your desired method of adding the filmography details to columns
-        print(f"Column 5: {film_ids[i]}, Column 6: {film_names[i]}")
+        print(f"Column 5: {film_ids[i]}, Column 6: {film_names[i]}, Column 7: {film_years[i]}")
 
 # Example usage
 person_id = input("Enter the person ID: ")
