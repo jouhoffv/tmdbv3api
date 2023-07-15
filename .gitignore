@@ -142,6 +142,9 @@ dmypy.json
 .stateFinance/
 .california/
 
+# llm testing
+.mosaic/
+
 # inputData
 import.csv
 output.csv
