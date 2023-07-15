@@ -133,6 +133,15 @@ dmypy.json
 # apiKey
 .secrets/
 
+# contentLibrary
+.catholic/
+.judaism/
+.evangelist/
+.detractor/
+.support/
+.stateFinance/
+.california/
+
 # inputData
 import.csv
 output.csv
