@@ -6,7 +6,7 @@ tmdb = TMDb()
 
 # Function to read the API key from .secrets/rootkey.csv
 def read_api_key():
-    with open('.secrets/rootkey.csv') as csvfile:
+    with open('.secrets/rootkey3.csv') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
             return row[0]  # Assuming the API key is in the first column (modify as per your CSV structure)
