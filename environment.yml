@@ -1,0 +1,11 @@
+name: tmdb
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip
+  - pip:
+    - tmdbv3api
+    - backports.functools-lru-cache
+    - requests
+    - urlib3
