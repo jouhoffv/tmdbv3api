@@ -41,7 +41,7 @@ def add_filmography_details(person_id):
             unique_genres.add(genre['name'])
 
     # Prepare CSV header
-    header = ['Column 5', 'Column 6', 'Column 7']
+    header = ['IMDB', 'TMDB', 'TITLE', 'DATE']
     genre_columns = list(unique_genres)
     header.extend(genre_columns)
 
